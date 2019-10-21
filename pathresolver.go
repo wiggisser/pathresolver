@@ -1,4 +1,4 @@
-//Package pathresolver provides simple access to uses home directory on linux, macOS and Windows systems
+//Package pathresolver provides a simple path resolving mechanism relative to a defined basedir
 package pathresolver
 
 import (
@@ -16,7 +16,7 @@ var (
 	isinit        bool = false
 )
 
-//Init initializes the pathresolver with a path for the respective system.
+//Init initializes the pathresolver with a basedir for the respective system.
 //If only one of the parameters is set, it is used of all systems
 //If both parameters are set, the basedirectory is set according to the current system
 //If the given paths are relative, they are set relative to the users homedir (~  and %HOMEDIR% respectively)
